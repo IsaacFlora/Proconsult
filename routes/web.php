@@ -63,20 +63,7 @@ Route::group(['prefix'=>'cms','middleware' => 'auth'], function(){
     Route::get('filtrar/meuschamados', 'FiltrosController@meuschamadosfiltro')->name('meuschamados.filtro');
     Route::get('buscar/meuschamados', 'FiltrosController@meuschamadosbusca')->name('meuschamados.busca');
     
-    Route::get('filtrar/slides', 'FiltrosController@slidesfiltro')->name('slides.filtro');
-    Route::get('buscar/slides', 'FiltrosController@slidesbusca')->name('slides.busca');
 
-    Route::get('filtrar/assistencias', 'FiltrosController@assistenciasfiltro')->name('assistencias.filtro');
-    Route::get('buscar/assistencias', 'FiltrosController@assistenciasbusca')->name('assistencias.busca');
-
-
-    Route::get('filtrar/repassesassistencias', 'FiltrosController@repassesassistenciasfiltro')->name('repassesassistencias.filtro');
-    Route::get('buscar/repassesassistencias', 'FiltrosController@repassesassistenciasbusca')->name('repassesassistencias.busca');
-
-
-    Route::get('buscar/categorias', 'FiltrosController@categoriasbusca')->name('categorias.busca');
-    Route::get('buscar/galerias', 'FiltrosController@galeriasbusca')->name('galerias.busca');
-    
     //Medias content
     Route::get('galerias/files/{id}', 'GaleriasController@filesall')->name('files.all');
     Route::post('galerias/files/up/{id}', 'GaleriasController@fileup')->name('file.up');
