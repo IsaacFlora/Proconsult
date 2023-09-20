@@ -39,7 +39,7 @@ class CriaTabelaMensagenschamado extends Migration
 
             $table->foreign('user_remetente')->references('id')->on('users')->onUpdate('NO ACTION')->onDelete('NO ACTION');
 
-            $table->foreign('chamado_id')->references('id')->on('chamados')->onUpdate('NO ACTION')->onDelete('NO ACTION');
+            $table->foreign('chamado_id')->references('id')->on('chamados')->onUpdate('NO ACTION')->onDelete('CASCADE');
 
 
         });
